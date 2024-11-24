@@ -1,0 +1,119 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background-color: #f4f7fc;
+    margin: 20px;
+    padding: 0;
+    color: #333;
+  }
+  
+  header {
+    background: linear-gradient(135deg, #4c51c6, #2ec4b6);
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
+  
+  h2 {
+    color: #333;
+    margin-top: 20px;
+  }
+  
+  canvas {
+    max-width: 100%;
+    margin: 20px auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #4A90E2;
+    color: #fff;
+  }
+  
+  tr.inconsistent {
+    background-color: rgba(255, 0, 0, 0.1);
+  }
+  
+  td {
+    font-size: 14px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  
+  .timestamp {
+    font-size: 0.9em;
+    color: #888;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  .pagination button {
+    padding: 10px 20px;
+    background-color: #4A90E2;
+    color: #fff;
+    border: none;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .dashboard-link {
+    display: inline-block;
+    background-color: #4A90E2;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dashboard-link:hover {
+    background-color: #357ABD;
+  }
+  
+  .dashboard-link i {
+    margin-right: 8px;
+  }
+  
+  footer {
+    background: linear-gradient(135deg, #4c51c6, #2ec4b6);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    margin-top: 30px;
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Logging System</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/test.css">
+</head>
+<body>
+
+<header>
+  <h1>Event Logging System</h1>
+</header>
+
+<main>
+  <section>
+    <a href="/dashboard.html" class="dashboard-link"><i class="fas fa-tachometer-alt"></i>go to Dashboard</a>
+    <h2>Log an Event</h2>
+    <form id="event-form" action="/api/events/log-event" method="POST">
+      <label for="eventType">Event Type:</label>
+      <input type="text" id="eventType" name="eventType" required><br>
+
+      <label for="sourceApp">Source Application ID:</label>
+      <input type="text" id="sourceApp" name="sourceAppId" required><br>
+
+      <label for="dataPayload">Data Payload (JSON):</label>
+      <textarea id="dataPayload" name="dataPayload" required></textarea><br>
+
+      <button type="submit">Submit Event</button>
+    </form>
+  </section>
+
+  <section id="filters-section" class="hidden">
+    <h2>Filters</h2>
+    <form id="filter-form" class="filters">
+      <label for="timestampStart">Start Date:</label>
+      <input type="datetime-local" id="timestampStart" name="timestampStart">
+
+      <label for="timestampEnd">End Date:</label>
+      <input type="datetime-local" id="timestampEnd" name="timestampEnd">
+
+      <label for="filterEventType">Event Type:</label>
+      <input type="text" id="filterEventType" name="eventType">
+
+      <label for="filterSourceApp">Source Application ID:</label>
+      <input type="text" id="filterSourceApp" name="sourceAppId">
+
+      <button type="button" id="apply-filters">Apply Filters</button>
+    </form>
+  </section>
+
+  <section id="event-collections-section" class="hidden">
+    <h3>Event Collections</h3>
+    <section id="event-list">
+      <!-- Events will be displayed here dynamically -->
+    </section>
+  </section>
+
+  <div class="pagination hidden">
+    <button id="prev-page" disabled><i class="fas fa-chevron-left"></i> Previous</button>
+    <p>Page <span id="current-page">1</span> of <span id="total-pages">1</span></p>
+    <button id="next-page" disabled>Next <i class="fas fa-chevron-right"></i></button>
+  </div>
+
+  <button id="show-sections">Show Filters and Events</button>
+</main>
+
+<footer>
+  <p>&copy; 2024 Event Logging System by Ravi.B</p>
+  <p><a href="https://drive.google.com/file/d/1klAcBvrtQlNEB8SSsuGAi9Y4NLDmYnO4/view?usp=sharing" target="_blank" style="color: #f9b327; text-decoration: none;">📄 View My Resume</a></p>
+</footer>
+
+<script src="js/test.js"></script>
+</body>
+</html>

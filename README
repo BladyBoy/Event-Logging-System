@@ -1,0 +1,136 @@
+Event Logging System
+Overview
+The Event Logging System is an API designed to log events, verify their consistency, and allow users to fetch event data with support for pagination, filtering, and a dashboard interface. It uses MongoDB to store event logs and employs Express.js for the server-side framework.
+
+Features
+Event Logging: Log events with type, source application ID, and data payload.
+Event Fetching: Retrieve events with filters and pagination options.
+Consistency Check: Each event is checked for consistency and validated.
+Dashboard: A web-based dashboard to view and manage events.
+Filters: Apply various filters (e.g., event type, timestamp) while fetching events.
+Tech Stack
+Backend: Node.js, Express.js
+Database: MongoDB
+Frontend: HTML, CSS (with minimal JavaScript for dynamic operations)
+Authentication: None (API-based with no user authentication for simplicity)
+Installation
+Prerequisites
+Node.js: Ensure Node.js is installed on your system. If not, download it from nodejs.org.
+MongoDB: Make sure MongoDB is installed and running locally or use a remote MongoDB URI.
+Steps
+Clone the repository:
+
+bash
+Copy code
+git clone <repository_url>
+cd event-logging-system
+Install dependencies:
+
+bash
+Copy code
+npm install
+Set up environment variables by creating a .env file in the root of the project with the following content:
+
+bash
+Copy code
+MONGO_URI=mongodb://127.0.0.1:27017/eventLogs
+Run MongoDB locally or set up a MongoDB URI in the .env file to connect remotely.
+
+Start the server:
+
+bash
+Copy code
+npm start
+The server will run on http://localhost:5000.
+
+File Structure
+graphql
+Copy code
+event-logging-system/
+├── config/
+│   └── db.js                # MongoDB connection setup
+├── controllers/
+│   └── eventController.js    # Contains logic for handling event-related routes
+├── models/
+│   └── Event.js              # Mongoose model for events
+├── public/
+│   ├── dashboard.html        # Dashboard page (used for event viewing)
+│   ├── test.html             # HTML page for logging events and displaying them
+│   └── css/
+│       └── test.css          # Styles for the frontend
+├── routes/
+│   └── eventRoutes.js        # API routes for handling event operations
+├── .env                      # Environment variables file (e.g., Mongo URI)
+├── server.js                 # Main server setup
+└── package.json              # NPM dependencies and scripts
+Endpoints
+POST /api/events/log-event
+Log a new event. The request body should contain:
+
+eventType: Type of the event (e.g., "user_login").
+sourceAppId: ID of the source application generating the event.
+dataPayload: JSON object containing event-related data.
+Example Request:
+json
+Copy code
+{
+  "eventType": "user_login",
+  "sourceAppId": "app123",
+  "dataPayload": "{\"userId\": \"abc123\", \"loginTime\": \"2024-11-24T10:00:00Z\"}"
+}
+Response:
+Status: 201 (Created) on success
+Status: 400 (Bad Request) if the request body is missing required fields or contains invalid data.
+GET /api/events
+Fetch a list of events with pagination and optional filters. You can specify query parameters:
+
+page: Page number (default: 1)
+limit: Number of events per page (default: 10)
+sort: Field to sort events by (default: timestamp)
+order: Sorting order (asc or desc, default: desc)
+timestampStart: Filter by start date
+timestampEnd: Filter by end date
+eventType: Filter by event type
+sourceAppId: Filter by source application ID
+Example Request:
+sql
+Copy code
+GET /api/events?page=1&limit=10&sort=timestamp&order=desc&eventType=user_login
+Response:
+Status: 200 OK with event data and pagination info.
+GET /api/events/dashboard
+Serve the dashboard HTML page.
+
+Example Request:
+bash
+Copy code
+GET /api/events/dashboard
+Response:
+The dashboard page will be returned for the user to interact with.
+Database Schema
+The Event schema defines the structure for event documents in MongoDB:
+
+eventType: Type of event (string)
+timestamp: Date when the event was logged (default: current timestamp)
+sourceAppId: Source application ID (string)
+dataPayload: Data related to the event (object)
+inconsistencies: List of inconsistencies found in the event (array of strings)
+previousHash: Hash of the previous event (string)
+hash: Hash of the current event (string)
+Event Consistency Check
+Each event is checked for consistency before being logged:
+
+Missing eventType: Error if the event type is not provided.
+Missing sourceAppId: Error if the source application ID is missing.
+Invalid or missing dataPayload: Error if the payload is not a valid object or missing.
+Frontend
+The frontend consists of basic HTML forms and UI components:
+
+test.html: A form where users can log events.
+dashboard.html: A basic dashboard that can be served with /api/events/dashboard.
+Contributing
+Feel free to fork the repository, make changes, and submit a pull request. Make sure to write tests for new features and document any changes you make.
+
+License
+MIT License. See LICENSE for more details.
+

@@ -1,0 +1,53 @@
+<!-- public/dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Dashboard</title>
+  <link rel="stylesheet" href="/css/dashboard.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header><h1>Event Dashboard</h1></header>
+
+  <!-- Chart Section -->
+  <h2>Event Type Distribution</h2>
+  <canvas id="eventChart"></canvas>
+
+  <h2>Event Logs</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Event Type</th>
+        <th>Source App</th>
+        <th>Payload</th>
+        <th>Timestamp</th>
+        <th>Inconsistency</th>
+      </tr>
+    </thead>
+    <tbody id="event-table-body">
+      <!-- Dynamic Content -->
+    </tbody>
+  </table>
+
+  <!-- Pagination Controls -->
+  <div class="pagination">
+    <button id="prev-page" disabled>Previous</button>
+    <span id="page-info">Page 1</span>
+    <button id="next-page" disabled>Next</button>
+  </div>
+
+  <!-- Link to test.html -->
+  <a href="/test.html" class="dashboard-link">
+    <i class="fas fa-tachometer-alt"></i> Go to Test Page
+  </a>
+
+  <footer>
+    <p>&copy; 2024 Event Logging System by Ravi.B</p>
+    <p><a href="https://drive.google.com/file/d/1klAcBvrtQlNEB8SSsuGAi9Y4NLDmYnO4/view?usp=sharing" target="_blank" style="color: #f9b327; text-decoration: none;">📄 View My Resume</a></p>
+  </footer>
+
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>

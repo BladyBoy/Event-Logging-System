@@ -1,0 +1,163 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(180deg, #f5f7fa, #c3cfe2);
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  header {
+    background: linear-gradient(135deg, #4c51c6, #2ec4b6);
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
+  
+  main {
+    padding: 20px;
+    max-width: 1100px;
+    margin: auto;
+  }
+  
+  h2, .filters h3, .event-collections h3 {
+    color: #4c51c6;
+    border-bottom: 2px solid #4c51c6;
+    padding-bottom: 8px;
+  }
+  
+  form, .filters, .event-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: 0.3s;
+  }
+  
+  form:hover, .filters:hover, .event-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+  }
+  
+  input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  input:focus, textarea:focus, select:focus {
+    border-color: #2ec4b6;
+    outline: none;
+  }
+  
+  button {
+    padding: 12px 20px;
+    background-color: #4c51c6;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1rem;
+  }
+  
+  button:hover {
+    background-color: #2ec4b6;
+  }
+  
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .filters label {
+    width: calc(50% - 10px);
+  }
+  
+  .event-item h3 {
+    color: #2ec4b6;
+    margin-top: 0;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .pagination button {
+    padding: 12px 18px;
+    background-color: #4c51c6;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1rem;
+  }
+  
+  .pagination button:hover {
+    background-color: #2ec4b6;
+  }
+  
+  .pagination button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+  }
+  
+  footer {
+    background: linear-gradient(135deg, #4c51c6, #2ec4b6);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    margin-top: 30px;
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .dashboard-link {
+    font-size: 1.1rem;
+    color: #4c51c6;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-left: 80%;
+  }
+  
+  .dashboard-link:hover {
+    background-color: rgb(87, 34, 178);
+    color: #2ec4b6;
+    padding: 20                                                                                                                                                                 px
+  }
+  
+  .dashboard-link i {
+    margin-right: 6px;
+  }
+  
