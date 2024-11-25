@@ -50,36 +50,37 @@ The **Event Logging System** is an API designed to log events, verify their cons
 
 If you're using a remote MongoDB instance, update the MONGO_URI with your MongoDB connection string.
 
-##Start the server:
+## Start the server:
 
 Start the application using the following command:
 
-```bash
+   ```bash
 
-npm start
+   npm start
 The server will be running at http://localhost:5000.
 
-#File Structure
+# File Structure
+
 Here’s an overview of the project’s file structure:
 
 
-event-logging-system/
-├── config/
-│   └── db.js                # MongoDB connection setup
-├── controllers/
-│   └── eventController.js    # Logic for handling event-related routes
-├── models/
-│   └── Event.js              # Mongoose model for events
-├── public/
-│   ├── dashboard.html        # Dashboard page (used for event viewing)
-│   ├── test.html             # HTML page for logging events and displaying them
-│   └── css/
-│       └── test.css          # Styles for the frontend
-├── routes/
-│   └── eventRoutes.js        # API routes for handling event operations
-├── .env                      # Environment variables file (e.g., Mongo URI)
-├── server.js                 # Main server setup
-└── package.json              # NPM dependencies and scripts
+   event-logging-system/
+   ├── config/
+   │   └── db.js                # MongoDB  connection setup
+   ├── controllers/
+   │   └── eventController.js    # Logic for handling event-related routes
+   ├── models/
+   │   └── Event.js              # Mongoose model for events
+   ├── public/
+   │   ├── dashboard.html        # Dashboard page (used for event viewing)
+   │   ├── test.html             # HTML page for logging events and displaying them
+   │   └── css/
+   │       └── test.css          # Styles for the frontend
+   ├── routes/
+   │   └── eventRoutes.js        # API routes for handling event operations
+   ├── .env                      # Environment variables file (e.g., Mongo URI)
+   ├── server.js                 # Main server setup
+   └── package.json              # NPM dependencies and scripts
 
 File Structure
 Here’s an overview of the project’s file structure:
