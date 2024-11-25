@@ -62,9 +62,9 @@ The server will be running at http://localhost:5000.
 
 # File Structure
 
-Here’s an overview of the project’s file structure:
+ Here’s an overview of the project’s file structure:
 
-   ```
+   
    event-logging-system/
    ├── config/
    │   └── db.js                # MongoDB  connection setup
@@ -83,30 +83,8 @@ Here’s an overview of the project’s file structure:
    ├── server.js                 # Main server setup
    └── package.json              # NPM dependencies and scripts
 
-## File Structure
-Here’s an overview of the project’s file structure:
 
-plaintext
-Copy code
-event-logging-system/
-├── config/
-│   └── db.js                # MongoDB connection setup
-├── controllers/
-│   └── eventController.js    # Logic for handling event-related routes
-├── models/
-│   └── Event.js              # Mongoose model for events
-├── public/
-│   ├── dashboard.html        # Dashboard page (used for event viewing)
-│   ├── test.html             # HTML page for logging events and displaying them
-│   └── css/
-│       └── test.css          # Styles for the frontend
-├── routes/
-│   └── eventRoutes.js        # API routes for handling event operations
-├── .env                      # Environment variables file (e.g., Mongo URI)
-├── server.js                 # Main server setup
-└── package.json              # NPM dependencies and scripts
-
-Endpoints
+### Endpoints
 POST /api/events/log-event
 Description: Log a new event. The request body should contain the following fields:
 
