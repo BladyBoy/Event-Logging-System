@@ -41,12 +41,13 @@ The **Event Logging System** is an API designed to log events, verify their cons
    ```bash
    npm install
 
-###Set up environment variables:
+### Set up environment variables:
 
 3.Create a .env file in the root of the project with the following content:
 
-```bash
-MONGO_URI=mongodb://127.0.0.1:27017/eventLogs
+   ```bash
+   MONGO_URI=mongodb://127.0.0.1:27017/eventLogs
+
 If you're using a remote MongoDB instance, update the MONGO_URI with your MongoDB connection string.
 
 ##Start the server:
