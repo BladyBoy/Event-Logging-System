@@ -64,7 +64,7 @@ The server will be running at http://localhost:5000.
 
 Here’s an overview of the project’s file structure:
 
-
+   ```
    event-logging-system/
    ├── config/
    │   └── db.js                # MongoDB  connection setup
