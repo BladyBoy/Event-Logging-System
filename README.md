@@ -52,11 +52,11 @@ If you're using a remote MongoDB instance, update the MONGO_URI with your MongoD
 
 ### Start the server:
 
-##Start the application using the following command:
+**Start the application using the following command**:
 
    ```bash
 
-   npm start
+   npm start 
 The server will be running at http://localhost:5000.
 
 # File Structure
