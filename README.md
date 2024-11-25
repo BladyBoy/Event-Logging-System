@@ -43,7 +43,7 @@ The **Event Logging System** is an API designed to log events, verify their cons
 
 ### Set up environment variables:
 
-3.Create a .env file in the root of the project with the following content:
+3. **Create a .env file in the root of the project with the following content**:
 
    ```bash
    MONGO_URI=mongodb://127.0.0.1:27017/eventLogs
