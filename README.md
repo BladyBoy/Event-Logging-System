@@ -64,7 +64,7 @@ The server will be running at http://localhost:5000.
 
  Here’s an overview of the project’s file structure
 
-   
+   ```
 
    event-logging-system/
    ├── config/
@@ -95,13 +95,13 @@ sourceAppId: ID of the source application generating the event.
 dataPayload: JSON object containing event-related data.
 Example Request:
 
-```json
+   ```json
 
-{
-  "eventType": "user_login",
-  "sourceAppId": "app123",
-  "dataPayload": "{\"userId\": \"abc123\", \"loginTime\": \"2024-11-24T10:00:00Z\"}"
-}
+   {
+     "eventType": "user_login",
+     "sourceAppId": "app123",
+     "dataPayload": "{\"userId\": \"abc123\", \"loginTime\": \"2024-11-24T10:00:00Z\"}"
+   }
 Response:
 
 Status: 201 (Created) on success.
