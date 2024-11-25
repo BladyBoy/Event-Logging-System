@@ -64,7 +64,7 @@ The server will be running at http://localhost:5000.
 
  Here’s an overview of the project’s file structure
 
-   ```
+   
 
    event-logging-system/
    ├── config/
@@ -86,6 +86,7 @@ The server will be running at http://localhost:5000.
 
 
 ### Endpoints
+
 POST /api/events/log-event
 Description: Log a new event. The request body should contain the following fields:
 
@@ -94,8 +95,8 @@ sourceAppId: ID of the source application generating the event.
 dataPayload: JSON object containing event-related data.
 Example Request:
 
-json
-Copy code
+```json
+
 {
   "eventType": "user_login",
   "sourceAppId": "app123",
@@ -105,7 +106,7 @@ Response:
 
 Status: 201 (Created) on success.
 Status: 400 (Bad Request) if the request body is missing required fields or contains invalid data.
-GET /api/events
+## GET /api/events
 Description: Fetch a list of events with pagination and optional filters. You can specify the following query parameters:
 
 page: Page number (default: 1).
@@ -118,8 +119,8 @@ eventType: Filter by event type.
 sourceAppId: Filter by source application ID.
 Example Request:
 
-bash
-Copy code
+```bash
+
 GET /api/events?page=1&limit=10&sort=timestamp&order=desc&eventType=user_login
 Response:
 
@@ -129,8 +130,8 @@ Description: Serve the dashboard HTML page.
 
 Example Request:
 
-bash
-Copy code
+```bash
+
 GET /api/events/dashboard
 Response:
 
@@ -177,7 +178,6 @@ License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 markdown
-Copy code
 
 ### Key Sections of the `README.md`:
 
@@ -192,10 +192,6 @@ Copy code
 - **Frontend**: Details the basic HTML UI files used for event logging and dashboard viewing.
 - **Contributing**: Instructions for contributing to the project.
 - **License**: States the project’s license type.
-
-This README provides a comprehensive guide to understand, set up, and contribute to your Event Logging System. It should serve as a great starting point for developers who want to work with or extend your project.
-
-
 
 
 
