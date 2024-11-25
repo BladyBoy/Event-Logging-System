@@ -54,7 +54,7 @@ If you're using a remote MongoDB instance, update the MONGO_URI with your MongoD
 
 **Start the application using the following command**:
 
-   ```bash
+   bash
 
    npm start
 
