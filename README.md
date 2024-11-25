@@ -62,14 +62,9 @@ The server will be running at http://localhost:5000.
 
 # File Structure
 
- Here’s an overview of the project’s file structure:
+ Here’s an overview of the project’s file structure
 
-    **Start the application using the following command**:
-
-   ```bash
-
-   npm start
-
+   ```
 
    event-logging-system/
    ├── config/
