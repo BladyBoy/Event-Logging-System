@@ -83,7 +83,7 @@ Here’s an overview of the project’s file structure:
    ├── server.js                 # Main server setup
    └── package.json              # NPM dependencies and scripts
 
-File Structure
+## File Structure
 Here’s an overview of the project’s file structure:
 
 plaintext
