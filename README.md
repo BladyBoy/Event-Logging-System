@@ -54,9 +54,9 @@ If you're using a remote MongoDB instance, update the MONGO_URI with your MongoD
 
 4. **Start the application using the following command**:
 
-   bash
+   ```bash
 
-   ```npm start```
+   npm start```
 
 The server will be running at http://localhost:5000.
 
