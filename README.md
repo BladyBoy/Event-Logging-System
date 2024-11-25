@@ -64,7 +64,13 @@ The server will be running at http://localhost:5000.
 
  Here’s an overview of the project’s file structure:
 
+   4. **Start the application using the following command**:
+
    ```bash
+
+   npm start
+
+
    event-logging-system/
    ├── config/
    │   └── db.js                # MongoDB  connection setup
