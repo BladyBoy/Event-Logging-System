@@ -50,9 +50,9 @@ The **Event Logging System** is an API designed to log events, verify their cons
 
 If you're using a remote MongoDB instance, update the MONGO_URI with your MongoDB connection string.
 
-## Start the server:
+### Start the server:
 
-Start the application using the following command:
+##Start the application using the following command:
 
    ```bash
 
