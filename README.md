@@ -36,34 +36,32 @@ The **Event Logging System** is an API designed to log events, verify their cons
 
 ### Install Dependencies
 
-Install the required dependencies using npm:
+2. **Install the required dependencies using npm**:
 
 ```bash
 npm install
 
-Set up environment variables:
+###Set up environment variables:
 
-Create a .env file in the root of the project with the following content:
+3.Create a .env file in the root of the project with the following content:
 
-bash
-Copy code
+```bash
 MONGO_URI=mongodb://127.0.0.1:27017/eventLogs
 If you're using a remote MongoDB instance, update the MONGO_URI with your MongoDB connection string.
 
-Start the server:
+##Start the server:
 
 Start the application using the following command:
 
-bash
-Copy code
+```bash
+
 npm start
 The server will be running at http://localhost:5000.
 
-File Structure
+#File Structure
 Here’s an overview of the project’s file structure:
 
-plaintext
-Copy code
+
 event-logging-system/
 ├── config/
 │   └── db.js                # MongoDB connection setup
