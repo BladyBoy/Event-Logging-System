@@ -38,8 +38,8 @@ The **Event Logging System** is an API designed to log events, verify their cons
 
 2. **Install the required dependencies using npm**:
 
-```bash
-npm install
+   ```bash
+   npm install
 
 ###Set up environment variables:
 
