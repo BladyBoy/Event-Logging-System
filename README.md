@@ -178,7 +178,6 @@ Ensure to write tests for new features and document any changes you make.
 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-markdown
 
 ### Key Sections of the `README.md`:
 
