@@ -87,7 +87,7 @@ The server will be running at http://localhost:5000.
 
 ### Endpoints
 
-POST /api/events/log-event
+``` POST /api/events/log-event```
 Description: Log a new event. The request body should contain the following fields:
 
 eventType: Type of the event (e.g., "user_login").
@@ -102,6 +102,7 @@ Example Request:
      "sourceAppId": "app123",
      "dataPayload": "{\"userId\": \"abc123\", \"loginTime\": \"2024-11-24T10:00:00Z\"}"
    }
+```
 Response:
 
 Status: 201 (Created) on success.
@@ -121,7 +122,7 @@ Example Request:
 
 ```bash
 
-GET /api/events?page=1&limit=10&sort=timestamp&order=desc&eventType=user_login
+GET /api/events?page=1&limit=10&sort=timestamp&order=desc&eventType=user_login ```
 Response:
 
 Status: 200 OK with event data and pagination info.
@@ -132,7 +133,7 @@ Example Request:
 
 ```bash
 
-GET /api/events/dashboard
+GET /api/events/dashboard ```
 Response:
 
 Returns the dashboard.html page for users to interact with.
