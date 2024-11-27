@@ -83,7 +83,7 @@ The server will be running at http://localhost:5000.
    ├── .env                      # Environment variables file (e.g., Mongo URI)
    ├── server.js                 # Main server setup
    └── package.json              # NPM dependencies and scripts
-
+```
 
 ### Endpoints
 
