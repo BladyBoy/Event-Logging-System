@@ -133,60 +133,76 @@ sourceAppId: Filter by source application ID.
 
 **Example Request:**
 
-```GET /api/events?page=1&limit=10&sort=timestamp&order=desc&eventType=user_login```
+```
+GET /api/events?page=1&limit=10&sort=timestamp&order=desc&eventType=user_login
+```
 
-Response:
+**Response:**
 
 Status: 200 OK with event data and pagination info.
 
-```GET /api/events/dashboard```
+```bash
+GET /api/events/dashboard```
 
 Description: Serve the dashboard HTML page.
 
 Example Request:
 
-```
-GET /api/events/dashboard ```
+```GET /api/events/dashboard ```
 
 Response:
 
-Returns the dashboard.html page for users to interact with.
-Database Schema
+Returns the dashboard.html page for users to interact with Database Schema. 
+
 The Event schema defines the structure for event documents in MongoDB:
 
 eventType: Type of event (string).
+
 timestamp: Date when the event was logged (default: current timestamp).
+
 sourceAppId: Source application ID (string).
+
 dataPayload: Data related to the event (object).
+
 inconsistencies: List of inconsistencies found in the event (array of strings).
+
 previousHash: Hash of the previous event (string).
+
 hash: Hash of the current event (string).
 
-Event Consistency Check
-Before logging any event, it undergoes a consistency check:
+Event Consistency Check Before logging any event, it undergoes a consistency check:
 
 Missing eventType: The event will not be logged if the eventType is not provided.
+
 Missing sourceAppId: The event will not be logged if the sourceAppId is missing.
+
 Invalid or missing dataPayload: The event will not be logged if the dataPayload is not a valid object or is missing.
-Frontend
+
+**Frontend**
 The frontend consists of basic HTML forms and UI components:
 
 test.html: A form where users can log events.
+
 dashboard.html: A simple dashboard page served at /api/events/dashboard to interact with event data.
-test.html
-This page allows users to log events by filling out a form with the event type, source application ID, and data payload.
 
-dashboard.html
-The dashboard displays logged events, allowing users to view and filter the events.
+test.html: This page allows users to log events by filling out a form with the event type, source application ID, and data payload.
 
-Contributing
+dashboard.html: The dashboard displays logged events, allowing users to view and filter the events.
+
+#Contributing
 Contributions are welcome! If you would like to contribute to the project, follow these steps:
 
-Fork the repository.
-Create a new branch (git checkout -b feature-name).
-Make your changes.
-Commit your changes (git commit -am 'Add feature').
-Push to the branch (git push origin feature-name).
+##Fork the repository.
+
+Create a new branch 
+```(git checkout -b feature-name)```
+
+**Make your changes.**
+Commit your changes 
+```(git commit -am 'Add feature')```
+
+**Push to the branch**
+(git push origin feature-name).
 Open a pull request.
 Ensure to write tests for new features and document any changes you make.
 License
