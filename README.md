@@ -91,8 +91,11 @@ The server will be running at http://localhost:5000.
 Description: Log a new event. The request body should contain the following fields:
 
 eventType: Type of the event (e.g., "user_login").
+
 sourceAppId: ID of the source application generating the event.
+
 dataPayload: JSON object containing event-related data.
+
 Example Request:
 
    ```json
@@ -106,7 +109,9 @@ Example Request:
 Response:
 
 Status: 201 (Created) on success.
+
 Status: 400 (Bad Request) if the request body is missing required fields or contains invalid data.
+
 ## GET /api/events
 Description: Fetch a list of events with pagination and optional filters. You can specify the following query parameters:
 
