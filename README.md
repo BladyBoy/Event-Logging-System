@@ -116,29 +116,38 @@ Status: 400 (Bad Request) if the request body is missing required fields or cont
 Description: Fetch a list of events with pagination and optional filters. You can specify the following query parameters:
 
 page: Page number (default: 1).
+
 limit: Number of events per page (default: 10).
+
 sort: Field to sort events by (default: timestamp).
+
 order: Sorting order (asc or desc, default: desc).
+
 timestampStart: Filter by start date.
+
 timestampEnd: Filter by end date.
+
 eventType: Filter by event type.
+
 sourceAppId: Filter by source application ID.
-Example Request:
 
-```bash
+**Example Request:**
 
-GET /api/events?page=1&limit=10&sort=timestamp&order=desc&eventType=user_login ```
+```GET /api/events?page=1&limit=10&sort=timestamp&order=desc&eventType=user_login```
+
 Response:
 
 Status: 200 OK with event data and pagination info.
-GET /api/events/dashboard
+
+```GET /api/events/dashboard```
+
 Description: Serve the dashboard HTML page.
 
 Example Request:
 
-```bash
-
+```
 GET /api/events/dashboard ```
+
 Response:
 
 Returns the dashboard.html page for users to interact with.
